@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete User</title>
+</head>
+<body>
+
+<h2>Delete User</h2>
+<input type="text" id="deleteEmail" placeholder="Email to Delete">
+<button onclick="deleteUser()">Delete</button>
+
+<script>
+function deleteUser() {
+    const email = document.getElementById('deleteEmail').value;
+    fetch(http://localhost:5000/delete/${email}, {
+        method: 'DELETE'
+    })
+    .then(res => res.text())
+    .then(alert)
+    .catch(() => alert('Deletion failed'));
+}
+</script>
+
+</body>
+</html>
